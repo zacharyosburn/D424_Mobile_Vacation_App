@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.ExcursionDetails">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="448dp"
+        android:layout_height="1000dp"
+        android:background="#7F4DAEFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:text="Excursion Title: "></TextView>
+
+                <EditText
+                    android:id="@+id/excursiontitletext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="What are you doing?"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:text="When is your excursion?: "></TextView>
+
+                <TextView
+                    android:id="@+id/excursiondatetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="19sp"
+                    android:hint="Start Date"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:text="Cost of excursion: $"></TextView>
+
+                <EditText
+                    android:id="@+id/excursionpricetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="Price"></EditText>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

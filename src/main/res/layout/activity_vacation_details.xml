@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AAB58AFD"
+    tools:context=".UI.VacationDetails">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="424dp"
+        android:layout_height="259dp"
+        android:background="#7F4DAEFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="Vacation Title: "
+                    android:textSize="16sp"></TextView>
+
+                <EditText
+                    android:id="@+id/titletext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="Enter where you're going"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="Where are you staying?: "
+                    android:textSize="16sp"></TextView>
+
+                <EditText
+                    android:id="@+id/accomodationtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="Hotel, Airbnb, etc..."></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="Vacation Start Date: "
+                    android:textSize="16sp"></TextView>
+
+                <TextView
+                    android:id="@+id/startdatetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="Start Date"
+                    android:textSize="19sp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="Vacation End Date: "
+                    android:textSize="16sp"></TextView>
+
+                <TextView
+                    android:id="@+id/enddatetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="End Date"
+                    android:textSize="19sp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="Cost of stay?: $"
+                    android:textSize="16sp"></TextView>
+
+                <EditText
+                    android:id="@+id/pricetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="Enter price of stay"></EditText>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_add_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/excursionrecyclerview"
+        android:layout_width="350dp"
+        android:layout_height="564dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:text="Excursions:"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Vacation ID:"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="32dp"
+        android:text="Date:"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintLeft_toRightOf="@id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
